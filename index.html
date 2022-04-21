@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><!--语言是英语-->
+<meta charset="utf-8">
+
+<head>
+  <link rel="stylesheet" href="./css/styles15-bg1.css" />
+  <script src="d3.v5.js"></script>
+  <script src="https://dl.ifanr.cn/hydrogen/sdk/sdk-web-latest.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <title>round</title>
+
+  <style type="text/css">
+    body{background-color:#e9eae7;}
+  </style>
+<!--#5e4b2c-->
+</head>
+
+<body>
+
+  <h2 class="title">Observations of Daily Living</h2>
+
+  <div id="my_dataviz"></div>
+  
+  <div id="wrapper" class="wrapper">
+
+    <!--一整个tooltip-->
+    <div id="tooltip" class="tooltip"><!--鼠标放上去的框-->  
+      
+      <div id="tooltip-date" class="tooltip-date">
+        </div><!--日期-->
+
+      <div class="tooltip-HRV tooltip-HRV-min"><!--HRV-->
+        <div>HRV:</div>
+        <div id="tooltip-HRV-min"></div><!--不分行的文字-->
+      </div>
+
+
+      <div class="tooltip-metric tooltip-cloud"><!--度量衡-->
+        <div>EDA(手腕)</div>
+        <div id="tooltip-cloud"></div><!--值-->
+      </div>
+
+      <div class="tooltip-metric tooltip-precipitation"><!--度量衡-->
+        <div>TEMP(手腕)</div>
+        <div id="tooltip-precipitation"></div><!--值-->
+      </div>
+    <!--div id="label"><img src="jpg/label.png" title="week" width="250px" alt=""></div-->
+    </div>
+
+  </div>
+
+
+
+  <div id="week" class="week"><!--每日-->
+    <table id="label" class="label">
+      <tr>
+        <td><a><!--a href="D3/0120/indexday1.html" --><!--a href="js day/day1.html" -->
+          <div id="days1" class="days1">
+            <img src="jpg/1.png" width="50px" id="day1" class="day1"/></div>
+        </a></td>
+        <td>
+          <img src="jpg/2.png" width="50px" /></td>
+        <td><img src="jpg/3.png" width="50px" /></td>
+        <td><img src="jpg/4.png" width="50px" /></td>
+        <td><img src="jpg/5.png" width="50px" /></td>
+        <td><img src="jpg/6.png" width="50px" /></td>
+        <td><img src="jpg/7.png" width="50px" /></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <script src="./js/chart16.js"></script>
+    <!--script src="./js/chart.js"></script-->
+</body>
+
+</html>
