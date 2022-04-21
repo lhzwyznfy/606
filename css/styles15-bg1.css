@@ -1,0 +1,311 @@
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 2em;
+  /*font-family: '', sans-serif;*/
+  font-size: 16px;
+  color: #34495e;
+  background: #f8f9fa;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+svg {
+  overflow: visible;
+}
+
+svg text {
+  user-select: none;
+}
+
+.title {
+  position: relative;
+  width: 600px;
+  margin-top: 1.3em;
+  margin-bottom: 0.3em;
+  line-height: 1.2em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'tnum' 1;
+  letter-spacing: 0.02em;
+  color: rgb(255, 255, 255);
+}
+
+.area {
+  fill: none;
+  stroke: none;
+  transition: all 0.3s ease-out;
+  opacity: 0.5;
+}
+
+.areaHRV {
+  fill: none;
+  stroke: none;
+  transition: all 0.3s ease-out;
+}
+
+
+.freezing-circle {
+  /*fill: #00d2d3;*/
+  fill:none;
+  stroke-width:20px;
+  stroke:#adadad;/*#8395a7;*/
+  opacity: 0.35;
+}
+
+.precipitation-dot {
+  opacity: 0.3;
+}
+
+.cloud-dot {
+  fill:#c9bc9c;/*#c8d6e5;*/
+  opacity: 0.3;
+}
+
+.cloud-doto {
+  fill:#c7d9e7;/*#c8d6e5;*/
+  opacity: 1;
+}
+.TEMP-dot {
+  fill:#d3bc88;
+  opacity:0.1;
+}
+
+.TEMP-doto {
+  fill:#c8d6e5;
+  opacity:1;
+}
+
+.uv-line {
+  stroke: #feca57;
+  stroke-width: 2;
+}
+
+.reddots{
+  fill: purple;
+  opacity: 0.8;
+}
+
+.reddotslow{
+  fill: blue;
+  opacity:0.8;
+}
+
+.grid-line {
+  fill: none;
+  stroke: #a48b78;
+  stroke-width: 1.5;
+  opacity: 0.4;
+}
+
+.grid-line2 {
+  fill: none;
+  stroke: #b4c9b2;
+  opacity: 0.6;
+}
+
+.grid-line3 {
+  fill: none;
+  stroke: #dadadd;
+  opacity: 0.6;
+}
+
+.grid-line4 {
+  fill: none;
+  stroke: #b4c9b2;
+  opacity: 0.6;
+}
+
+.grid-line5 {
+  fill: none;
+  stroke: #dadadd;
+  opacity: 0.6;
+}
+
+.grid-line6 {
+  fill: none;
+  stroke: #b4c9b2;
+  opacity: 0.6;
+}
+
+.grid-line7 {
+  fill: none;
+  stroke: #e2e6cf;
+  opacity: 0.6;
+}
+
+.hour-cir {
+  fill: none;
+  stroke: #dbdbdb;
+  stroke-width: 3.6%;
+  opacity: 0.6;
+}
+
+.hour-bg {
+  fill: white;
+  stroke: none;
+}
+
+
+.tick-label {
+  dominant-baseline: middle;
+  /* Use dominant-baseline to center our labels */
+  fill: #aeb6af;
+  font-size: 0.6em;
+  font-weight: 900;
+}
+
+.tick-label-temperature {
+  /* Vertically center and dim our labels */
+  fill: #8395a7;
+  opacity: 0.7;
+  font-size: 0.5em;
+  dominant-baseline: middle;
+}
+
+.annotation-line {
+  stroke: #34495e;
+  opacity: 0.4;
+}
+
+.annotation-text {
+  fill: #34495e;
+  font-size: 0.7em;
+  dominant-baseline: middle;
+}
+
+.listener-circle {
+  fill: transparent;
+}
+
+.white-circle{
+  fill:white;
+  opacity: 0.45;
+}
+
+.tooltip-line {
+  fill:white;/* #8395a7;*/
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.tooltip1{
+  position:absolute;
+}
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8em;
+  height: 8em;
+  /*border-radius: 50%;*/
+  padding: 0.6em 1em;
+  /*background:none; rgb(255, 255, 255);*/
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 0.9em;
+  border: none;/*2px solid #c7dac8;*/
+  z-index: 10;
+  pointer-events: none;
+  position: absolute;
+}
+
+.tooltip-date {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  color:#efefef;
+
+}
+
+.tooltip-HRV {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.3em;
+    transition: all 0.1s ease-out;
+    color: #efefef;
+}
+
+.tooltip-metric {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.6em;
+  line-height: 1.3em;
+  transition: all 0.1s ease-out;
+  color: #efefef;
+}
+
+.tooltip-metric div:first-child {
+  font-weight: 800;
+  padding-right: 1em;
+  color: #efefef;
+}
+
+.tooltip-metric div:nth-child(2) {
+  font-feature-settings: 'tnum' 1;
+}
+
+.tooltip-cloud {
+  color: #efefef;  /*#8395a7;*/
+}
+.tooltip-uv {
+  color: #efefef;/*#feca57;*/
+}
+
+
+#week{
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  /*display:block; */
+  /*margin: 0 auto;*/
+  width: 5em;
+  height: 2em;
+  border-radius: 50%;
+  padding: 0.6em 1em;
+  /*background:rgb(255, 255, 255);*/
+  line-height: 1.4em;
+  font-size: 0.9em;
+  border: grey;/*2px solid #c7dac8;*/
+  /*z-index: 10;*/
+  /*pointer-events: none;*/
+}
+
+#label{
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 10;
+  border:10px;
+  height: 100px;
+}
+
+
+#days1 img{
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: contain;
+}
+
+#days1 img.day1:hover{opacity:0.2;src: url(jpg/c1.png);width:70px;}
+
+.tooltipday1{position:absolute;}
+.textxday1{position:absolute;}
+.selectedday1 {opacity: 1 !important;stroke: rgb(255, 134, 97);stroke-width: 1px;}
